@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 10%;
+  width: 40%;
+}
+
+.container-platform {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.container-platform a {
+  margin: 40%;
+}
+
+.container-platform .bi {
+  width: 43px;
+  height: 43px;
+}
+
+.container-platform .bi-apple {
+  color: #555555;
+}
+
+.container-platform .bi-youtube {
+  color: #ff0000;
+  top: 15%;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  iframe {
+    right: 5%;
+    top: 30%;
+    width: 90%;
+  }
+
+  .container-platform {
+    top: 75%;
+    left: 50%;
+  }
+
+  .container-platform a {
+    margin: 0;
+  }
+}
