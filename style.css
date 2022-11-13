@@ -3,20 +3,82 @@
   padding: 0;
 }
 
-iframe {
-  position: absolute;
+body {
+  overflow: hidden;
+}
+
+img {
+  position: fixed;
+  width: 100%;
+  left: 50%;
   top: 50%;
-  transform: translate(0, -50%);
-  right: 10%;
-  width: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  background: rgba(40, 40, 40, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(40, 40, 40, 0.3);
+  width: 768px;
+  height: 768px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-iframe-spotify,
+.container-iframe-apple {
+  /* background: black; */
+  width: 768px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.container-iframe-apple {
+  top: 1500px;
+}
+
+.iframe-spotify,
+.iframe-apple {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+}
+
+.iframe-spotify {
+  top: 81%;
+}
+
+.iframe-apple {
+  position: relative;
+  top: 78%;
+  margin-bottom: 500px;
+}
+
+.background-platform {
+  position: fixed;
+  left: 50%;
+  top: 80.3%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 70px;
+  border-radius: 16px;
+  background: #252525;
 }
 
 .container-platform {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  position: fixed;
   display: flex;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
 .container-platform a {
@@ -28,29 +90,37 @@ iframe {
   height: 43px;
 }
 
+.container-platform .bi-spotify {
+  color: white;
+}
+
 .container-platform .bi-apple {
-  color: #555555;
+  /* color: #555555; */
+  color: white;
 }
 
 .container-platform .bi-youtube {
-  color: #ff0000;
-  top: 15%;
+  /* color: #ff0000; */
+  color: white;
+  top: 13%;
   position: relative;
 }
 
 @media only screen and (max-width: 768px) {
-  iframe {
-    right: 5%;
-    top: 30%;
+  img {
+    height: 100%;
+  }
+
+  .container {
     width: 90%;
   }
 
   .container-platform {
-    top: 75%;
-    left: 50%;
+    left: 34%;
   }
 
-  .container-platform a {
-    margin: 0;
+  .container-iframe-spotify,
+  .container-iframe-apple {
+    width: 85%;
   }
 }
